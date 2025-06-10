@@ -16,7 +16,7 @@ public class Conexao {
     // Para Aiven, certifique-se de que o certificado CA esteja configurado no seu ambiente Java
     // ou use allowPublicKeyRetrieval=true para testes (não ideal para produção sem CA cert).
     private static final String DB_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME +
-            "?useSSL=true" +
+            "?useSSL=false" +
             "&requireSSL=true" +
             "&verifyServerCertificate=true" +
             "&allowPublicKeyRetrieval=true"; // Necessário para MySQL 8+ se não estiver usando CA cert
