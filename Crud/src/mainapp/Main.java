@@ -30,7 +30,6 @@ public class Main {
 
         try {
             System.out.println("--- CRUD Deuses ---");
-            // Criar Deus
             atena = new Deuses("Atena", "Sabedoria e Guerra Estratégica", "Grega", "Deusa da sabedoria, guerra e justiça.");
             deusesDAO.create(atena);
             System.out.println("Deus criado: " + atena);
@@ -65,14 +64,11 @@ public class Main {
             seguidorDAO.create(radamanthys);
             System.out.println("Seguidor criado: " + radamanthys);
 
-            // Listar Seguidores
             List<Seguidor> seguidores = seguidorDAO.findAll();
             System.out.println("\nTodos os Seguidores:");
             seguidores.forEach(System.out::println);
 
-            // --- CRUD para Templos ---
             System.out.println("\n--- CRUD Templos ---");
-            // Criar Templo
             santuario = new Templo("Santuário de Atena", atena.getId(), "Grécia", "Local sagrado de Atena e seus cavaleiros.");
             temploDAO.create(santuario);
             System.out.println("Templo criado: " + santuario);
@@ -81,14 +77,11 @@ public class Main {
             temploDAO.create(casteloHades);
             System.out.println("Templo criado: " + casteloHades);
 
-            // Listar Templos
             List<Templo> templos = temploDAO.findAll();
             System.out.println("\nTodos os Templos:");
             templos.forEach(System.out::println);
 
-            // --- CRUD para Rituais ---
             System.out.println("\n--- CRUD Rituais ---");
-            // Criar Ritual
             exclamacaoAtena = new Ritual("Exclamação de Atena", atena.getId(), "Ataque combinado de três cavaleiros de ouro.", "3 Cavaleiros de Ouro.");
             ritualDAO.create(exclamacaoAtena);
             System.out.println("Ritual criado: " + exclamacaoAtena);
@@ -97,7 +90,6 @@ public class Main {
             ritualDAO.create(punicaoDivina);
             System.out.println("Ritual criado: " + punicaoDivina);
 
-            // Listar Rituais
             List<Ritual> rituais = ritualDAO.findAll();
             System.out.println("\nTodos os Rituais:");
             rituais.forEach(System.out::println);
@@ -111,24 +103,20 @@ public class Main {
             esferaPoderDAO.create(arayaShiki);
             System.out.println("Esfera de Poder criada: " + arayaShiki);
 
-            // Listar Esferas de Poder
             List<EsferaPoder> esferas = esferaPoderDAO.findAll();
             System.out.println("\nTodas as Esferas de Poder:");
             esferas.forEach(System.out::println);
 
-            // --- Exemplo de Deleção ---
             System.out.println("\n--- Exemplo de Deleção ---");
-            // Agora 'exclamacaoAtena' e 'arayashiki' estão acessíveis aqui
             if (exclamacaoAtena != null) {
                 ritualDAO.delete(exclamacaoAtena.getId());
                 System.out.println("Ritual Exclamação de Atena deletado.");
             }
-            if (arayaShiki != null) { // arayashiki está acessível agora
-                esferaPoderDAO.delete(arayaShiki.getId()); // arayashiki está acessível agora
+            if (arayaShiki != null) {
+                esferaPoderDAO.delete(arayaShiki.getId());
                 System.out.println("Esfera de Poder Arayashiki deletada.");
             }
 
-            // Verifique novamente as listas
             System.out.println("\nTodos os Rituais após deleção:");
             ritualDAO.findAll().forEach(System.out::println);
             System.out.println("\nTodas as Esferas de Poder após deleção:");
