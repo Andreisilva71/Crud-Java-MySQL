@@ -10,7 +10,7 @@ public class Conexao {
     private static final String DB_PORT = "19535";
     private static final String DB_NAME = "deuses_entidades_divinas_Andrei_e_Claiton";
     private static final String DB_USER = "avnadmin";
-    private static final String DB_PASSWORD = "sua_senha";
+    private static final String DB_PASSWORD = "//suasenha";
 
     private static final String DB_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME +
             "?useSSL=false" +
