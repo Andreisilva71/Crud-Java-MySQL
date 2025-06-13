@@ -34,7 +34,10 @@ public class EsferaPoder {
     }
     public  String TipoEnergia(){
         return tipoEnergia;
+    }
 
+    public String getTipoEnergia() {
+        return tipoEnergia;
     }
 
     public void setTipoEnergia(String tipoEnergia) {

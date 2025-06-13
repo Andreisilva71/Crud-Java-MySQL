@@ -6,7 +6,7 @@ public class Seguidor {
     private Integer idDeus;
     private String tipoSeguidor;
     private String patente;
-    private String contelacaoMarinhaEstrela;
+    private String constelacaoMarinhaEstrela;
 
     public Seguidor(int id, String nome, Integer idDeus, String tipoSeguidor, String patente, String contelacaoMarinhaEstrela){
         this.id = id;
@@ -14,7 +14,7 @@ public class Seguidor {
         this.idDeus = idDeus;
         this.tipoSeguidor = tipoSeguidor;
         this.patente = patente;
-        this.contelacaoMarinhaEstrela = contelacaoMarinhaEstrela;
+        this.constelacaoMarinhaEstrela = contelacaoMarinhaEstrela;
     }
 
     public Seguidor(String nome, Integer idDeus, String tipoSeguidor, String patente, String contelacaoMarinhaEstrela){
@@ -22,7 +22,7 @@ public class Seguidor {
         this.idDeus = idDeus;
         this.tipoSeguidor = tipoSeguidor;
         this.patente = patente;
-        this.contelacaoMarinhaEstrela = contelacaoMarinhaEstrela;
+        this.constelacaoMarinhaEstrela = contelacaoMarinhaEstrela;
     }
 
     public int getId() {
@@ -65,11 +65,11 @@ public class Seguidor {
         this.patente = patente;
     }
 
-    public String getContelacaoMarinhaEstrela() {
-        return contelacaoMarinhaEstrela;
+    public String getConstelacaoMarinhaEstrela() {
+        return constelacaoMarinhaEstrela;
     }
 
-    public void setContelacaoMarinhaEstrela(String contelacaoMarinhaEstrela) {
-        this.contelacaoMarinhaEstrela = contelacaoMarinhaEstrela;
+    public void setConstelacaoMarinhaEstrela(String constelacaoMarinhaEstrela) {
+        this.constelacaoMarinhaEstrela = constelacaoMarinhaEstrela;
     }
 }
